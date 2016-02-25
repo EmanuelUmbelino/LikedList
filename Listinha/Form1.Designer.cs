@@ -28,75 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ButtonNew = new System.Windows.Forms.Button();
+            this.newInPosition = new System.Windows.Forms.TextBox();
+            this.buttonNewPosition = new System.Windows.Forms.Button();
+            this.position1 = new System.Windows.Forms.TextBox();
+            this.position2 = new System.Windows.Forms.TextBox();
+            this.buttonChange = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.nMochilas = new System.Windows.Forms.TextBox();
+            this.buttonRemove = new System.Windows.Forms.Button();
+            this.removePosition = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.listBox = new System.Windows.Forms.ListBox();
+            this.buttonNewValue = new System.Windows.Forms.Button();
+            this.newAfterValue = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // ButtonNew
             // 
-            this.button1.Location = new System.Drawing.Point(439, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "New Item";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.AddElement);
+            this.ButtonNew.Location = new System.Drawing.Point(439, 30);
+            this.ButtonNew.Name = "ButtonNew";
+            this.ButtonNew.Size = new System.Drawing.Size(85, 34);
+            this.ButtonNew.TabIndex = 0;
+            this.ButtonNew.Text = "New Item";
+            this.ButtonNew.UseVisualStyleBackColor = true;
+            this.ButtonNew.Click += new System.EventHandler(this.AddElement);
             // 
-            // textBox1
+            // newInPosition
             // 
-            this.textBox1.Location = new System.Drawing.Point(48, 256);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
+            this.newInPosition.Location = new System.Drawing.Point(48, 256);
+            this.newInPosition.Name = "newInPosition";
+            this.newInPosition.Size = new System.Drawing.Size(100, 20);
+            this.newInPosition.TabIndex = 1;
+            this.newInPosition.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
             // 
-            // button2
+            // buttonNewPosition
             // 
-            this.button2.Location = new System.Drawing.Point(48, 278);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 46);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "New Item in Position";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.AddElementToPosition);
+            this.buttonNewPosition.Location = new System.Drawing.Point(48, 278);
+            this.buttonNewPosition.Name = "buttonNewPosition";
+            this.buttonNewPosition.Size = new System.Drawing.Size(100, 46);
+            this.buttonNewPosition.TabIndex = 2;
+            this.buttonNewPosition.Text = "New Item in Position";
+            this.buttonNewPosition.UseVisualStyleBackColor = true;
+            this.buttonNewPosition.Click += new System.EventHandler(this.AddElementToPosition);
             // 
-            // textBox2
+            // position1
             // 
-            this.textBox2.Location = new System.Drawing.Point(439, 256);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(47, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
+            this.position1.Location = new System.Drawing.Point(439, 256);
+            this.position1.Name = "position1";
+            this.position1.Size = new System.Drawing.Size(47, 20);
+            this.position1.TabIndex = 3;
+            this.position1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
             // 
-            // textBox3
+            // position2
             // 
-            this.textBox3.Location = new System.Drawing.Point(492, 256);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(49, 20);
-            this.textBox3.TabIndex = 4;
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
+            this.position2.Location = new System.Drawing.Point(492, 256);
+            this.position2.Name = "position2";
+            this.position2.Size = new System.Drawing.Size(49, 20);
+            this.position2.TabIndex = 4;
+            this.position2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
             // 
-            // button3
+            // buttonChange
             // 
-            this.button3.Location = new System.Drawing.Point(439, 278);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 46);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Change Position ";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.ChangePosition);
+            this.buttonChange.Location = new System.Drawing.Point(439, 278);
+            this.buttonChange.Name = "buttonChange";
+            this.buttonChange.Size = new System.Drawing.Size(102, 46);
+            this.buttonChange.TabIndex = 5;
+            this.buttonChange.Text = "Change Position ";
+            this.buttonChange.UseVisualStyleBackColor = true;
+            this.buttonChange.Click += new System.EventHandler(this.ChangePosition);
             // 
             // label1
             // 
@@ -107,31 +107,31 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Mochilas\' Number";
             // 
-            // textBox4
+            // nMochilas
             // 
-            this.textBox4.Location = new System.Drawing.Point(48, 44);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.nMochilas.Location = new System.Drawing.Point(48, 44);
+            this.nMochilas.Name = "nMochilas";
+            this.nMochilas.ReadOnly = true;
+            this.nMochilas.Size = new System.Drawing.Size(100, 20);
+            this.nMochilas.TabIndex = 7;
             // 
-            // button4
+            // buttonRemove
             // 
-            this.button4.Location = new System.Drawing.Point(317, 278);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 46);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Remove by Position";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.Remove);
+            this.buttonRemove.Location = new System.Drawing.Point(317, 278);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(86, 46);
+            this.buttonRemove.TabIndex = 8;
+            this.buttonRemove.Text = "Remove by Position";
+            this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.Remove);
             // 
-            // textBox5
+            // removePosition
             // 
-            this.textBox5.Location = new System.Drawing.Point(317, 256);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(86, 20);
-            this.textBox5.TabIndex = 9;
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
+            this.removePosition.Location = new System.Drawing.Point(317, 256);
+            this.removePosition.Name = "removePosition";
+            this.removePosition.Size = new System.Drawing.Size(86, 20);
+            this.removePosition.TabIndex = 9;
+            this.removePosition.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
             // 
             // label2
             // 
@@ -142,50 +142,50 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Mochilas";
             // 
-            // listBox1
+            // listBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(48, 88);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(493, 121);
-            this.listBox1.TabIndex = 11;
+            this.listBox.FormattingEnabled = true;
+            this.listBox.Location = new System.Drawing.Point(48, 88);
+            this.listBox.Name = "listBox";
+            this.listBox.Size = new System.Drawing.Size(493, 121);
+            this.listBox.TabIndex = 11;
             // 
-            // button5
+            // buttonNewValue
             // 
-            this.button5.Location = new System.Drawing.Point(183, 278);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 46);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "New Item after Value";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.AddElementToValue);
+            this.buttonNewValue.Location = new System.Drawing.Point(183, 278);
+            this.buttonNewValue.Name = "buttonNewValue";
+            this.buttonNewValue.Size = new System.Drawing.Size(100, 46);
+            this.buttonNewValue.TabIndex = 12;
+            this.buttonNewValue.Text = "New Item after Value";
+            this.buttonNewValue.UseVisualStyleBackColor = true;
+            this.buttonNewValue.Click += new System.EventHandler(this.AddElementToValue);
             // 
-            // textBox6
+            // newAfterValue
             // 
-            this.textBox6.Location = new System.Drawing.Point(183, 256);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 13;
+            this.newAfterValue.Location = new System.Drawing.Point(183, 256);
+            this.newAfterValue.Name = "newAfterValue";
+            this.newAfterValue.Size = new System.Drawing.Size(100, 20);
+            this.newAfterValue.TabIndex = 13;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(593, 424);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.newAfterValue);
+            this.Controls.Add(this.buttonNewValue);
+            this.Controls.Add(this.listBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.removePosition);
+            this.Controls.Add(this.buttonRemove);
+            this.Controls.Add(this.nMochilas);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonChange);
+            this.Controls.Add(this.position2);
+            this.Controls.Add(this.position1);
+            this.Controls.Add(this.buttonNewPosition);
+            this.Controls.Add(this.newInPosition);
+            this.Controls.Add(this.ButtonNew);
             this.Name = "Form1";
             this.Text = "Lista de Mochilas";
             this.ResumeLayout(false);
@@ -195,20 +195,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ButtonNew;
+        private System.Windows.Forms.TextBox newInPosition;
+        private System.Windows.Forms.Button buttonNewPosition;
+        private System.Windows.Forms.TextBox position1;
+        private System.Windows.Forms.TextBox position2;
+        private System.Windows.Forms.Button buttonChange;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox nMochilas;
+        private System.Windows.Forms.Button buttonRemove;
+        private System.Windows.Forms.TextBox removePosition;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ListBox listBox;
+        private System.Windows.Forms.Button buttonNewValue;
+        private System.Windows.Forms.TextBox newAfterValue;
     }
 }
 

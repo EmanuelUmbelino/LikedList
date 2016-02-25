@@ -12,7 +12,7 @@ namespace Listinha
 {
     public partial class Form1 : Form
     {
-        Mochila m;
+        Mochila element;
         public Form1()
         {
             InitializeComponent();
@@ -21,15 +21,15 @@ namespace Listinha
         void PlaceinTheList(Mochila x)
         {
             if (x.Position().Equals(0))
-                listBox1.Items.Clear();
+                listBox.Items.Clear();
             if (x.Next() != null)
             {
                 if(x.Previous() != null)
-                    listBox1.Items.Add(x.Position() + ": Mochila " + x.Index() + " e dentro tem a " + 
+                    listBox.Items.Add(x.Position() + ": Mochila " + x.Index() + " e dentro tem a " + 
                         x.Next().Index() +
                         " e está dentro da " + x.Previous().Index());
                 else
-                    listBox1.Items.Add(x.Position() + ": Mochila " + x.Index() + " e dentro tem a " + 
+                    listBox.Items.Add(x.Position() + ": Mochila " + x.Index() + " e dentro tem a " + 
                         x.Next().Index() + " e não está dentro de nenhuma");
 
                 PlaceinTheList(x.Next());
@@ -37,10 +37,10 @@ namespace Listinha
             else
             {
                 if (x.Previous() != null)
-                    listBox1.Items.Add(x.Position() + ": Mochila " + x.Index() + " e dentro tem nada e está dentro da " + x.Previous().Index());
+                    listBox.Items.Add(x.Position() + ": Mochila " + x.Index() + " e dentro tem nada e está dentro da " + x.Previous().Index());
                 else
-                    listBox1.Items.Add(x.Position() + ": Mochila " + x.Index() + " e dentro tem nada e não está dentro de nenhuma");
-                textBox4.Text = (x.Position() + 1).ToString();
+                    listBox.Items.Add(x.Position() + ": Mochila " + x.Index() + " e dentro tem nada e não está dentro de nenhuma");
+                nMochilas.Text = (x.Position() + 1).ToString();
             }
 
         }
@@ -59,10 +59,10 @@ namespace Listinha
                     }
                     else
                     {
-                        m = x.Next();
-                        m.Previous(null);
-                        m.Position(0);
-                        m.Next().Position(1);
+                        element = x.Next();
+                        element.Previous(null);
+                        element.Position(0);
+                        element.Next().Position(1);
                     }
                 }
                 else
@@ -100,20 +100,20 @@ namespace Listinha
             y.Index(x.Index());
             x.Index(ew);
         }
-        Mochila AddEnd(Mochila x, int posicao, int tamanho)
+        Mochila AddEnd(Mochila x, int position, int index)
         {
-            if (x.Index() >= tamanho)
-                tamanho = x.Index() + 1;
+            if (x.Index() >= index)
+                index = x.Index() + 1;
             if (x.Next() != null)
             {
-                x.Next(AddEnd(x.Next(), posicao + 1, tamanho));
+                x.Next(AddEnd(x.Next(), position + 1, index));
             }
             else
             {
                 x.Next(new Mochila());
                 x.Next().Previous(x);
-                x.Next().Position(posicao);
-                x.Next().Index(tamanho);
+                x.Next().Position(position);
+                x.Next().Index(index);
             }
             return x;
         }
@@ -144,27 +144,27 @@ namespace Listinha
 
         private void AddElement(object sender, EventArgs e)
         {
-            if (m != null)
+            if (element != null)
             {
-                m = AddEnd(m, 1, 1);
+                element = AddEnd(element, 1, 1);
             }
             else
             {
-                m = new Mochila();
-                m.Index(1);
+                element = new Mochila();
+                element.Index(1);
             }
-            PlaceinTheList(m);
+            PlaceinTheList(element);
         }
 
         private void AddElementToPosition(object sender, EventArgs e)
         {
-            if (textBox1.Text != null && textBox1.Text != "")
+            if (newInPosition.Text != null && newInPosition.Text != "")
             {
                 try
                 {
-                    m = AddEnd(m, 1, 1);
-                    GoToPosition(GoToEnd(m), int.Parse(textBox1.Text));
-                    PlaceinTheList(m);
+                    element = AddEnd(element, 1, 1);
+                    GoToPosition(GoToEnd(element), int.Parse(newInPosition.Text));
+                    PlaceinTheList(element);
                 }
                 catch
                 {
@@ -177,13 +177,13 @@ namespace Listinha
 
         private void AddElementToValue(object sender, EventArgs e)
         {
-            if (textBox6.Text != null && textBox6.Text != "")
+            if (newAfterValue.Text != null && newAfterValue.Text != "")
             {
                 try
                 {
-                    m = AddEnd(m, 1, 1);
-                    GoToIndex(GoToEnd(m), int.Parse(textBox6.Text));
-                    PlaceinTheList(m);
+                    element = AddEnd(element, 1, 1);
+                    GoToIndex(GoToEnd(element), int.Parse(newAfterValue.Text));
+                    PlaceinTheList(element);
                 }
                 catch
                 {
@@ -195,12 +195,12 @@ namespace Listinha
         }
         private void ChangePosition(object sender, EventArgs e)
         {
-            if (textBox2.Text != null && textBox2.Text != "" && textBox3.Text != null && textBox3.Text != "")
+            if (position1.Text != null && position1.Text != "" && position2.Text != null && position2.Text != "")
             {
                 try
                 {
-                    ChangePosition(GetByPositon(m, int.Parse(textBox2.Text)), GetByPositon(m, int.Parse(textBox3.Text)));
-                    PlaceinTheList(m);
+                    ChangePosition(GetByPositon(element, int.Parse(position1.Text)), GetByPositon(element, int.Parse(position2.Text)));
+                    PlaceinTheList(element);
                 }
                 catch 
                 {
@@ -213,12 +213,12 @@ namespace Listinha
 
         private void Remove(object sender, EventArgs e)
         {
-            if (textBox5.Text != null && textBox5.Text != "")
+            if (removePosition.Text != null && removePosition.Text != "")
             {
                 try
                 {
-                    AllBackToPosition(GetByPositon(m, int.Parse(textBox5.Text)), 0);
-                    PlaceinTheList(m);
+                    AllBackToPosition(GetByPositon(element, int.Parse(removePosition.Text)), 0);
+                    PlaceinTheList(element);
                 }
                 catch
                 {
